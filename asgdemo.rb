@@ -6,7 +6,7 @@ cloudwatch = Aws::CloudWatch::Client.new(region: 'us-east-1')
 
 get '/' do
     calc_time = Benchmark.realtime do
-      for i in 0..500
+      for i in 0..5000
         puts Math.sqrt(Math::PI)
       end
     end
